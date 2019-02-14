@@ -55,7 +55,7 @@ def main(search_time_window, domains):
             if data['requests']:
                 for _ in data['requests']:
 #                   print(json.dumps(_, indent=4, sort_keys=True))
-                    result.append([_['datetime'], _['internalIp'], _['originLabel'], _['destination'], ['actionTaken']])
+                    result.append([_['datetime'], _['internalIp'], _['originLabel'], _['destination'], _['actionTaken']])
      
     for _ in result:
         print(";".join(map(str,_)))

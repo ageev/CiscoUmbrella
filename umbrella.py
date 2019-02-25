@@ -42,6 +42,7 @@ def main(search_time_window, domains):
 
     for domain in domains:
         domain = domain.replace("[", "").replace("]", "") #allows you to use escaped domains like domain[.]com
+        domain = domain.replace(" ", "") #remove spaces
         
         while True:
             data = getHistory(domain, TIME_START, TIME_END)
